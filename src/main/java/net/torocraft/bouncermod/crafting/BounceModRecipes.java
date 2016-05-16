@@ -14,6 +14,7 @@ public class BounceModRecipes {
 	
 	private static void rubberManufacturing() {
 		GameRegistry.addSmelting(BounceModItems.rubberSapItem, new ItemStack(BounceModItems.rawRubberItem), .7F);
+		GameRegistry.addSmelting(Items.slime_ball, new ItemStack(BounceModItems.rawRubberItem), .7F);
 		GameRegistry.addRecipe(new ItemStack(BounceModBlocks.rubberBlock), "##", "##", '#', BounceModItems.rawRubberItem);
 		GameRegistry.addRecipe(new ItemStack(BounceModItems.rubberSwordItem), " # ", " # ", " S ", '#', BounceModItems.rawRubberItem, 'S', Items.stick);
 	}
