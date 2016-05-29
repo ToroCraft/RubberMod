@@ -6,7 +6,6 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
-import net.minecraftforge.common.util.EnumHelper;
 import net.torocraft.bouncermod.material.ToolMaterials;
 import net.torocraft.bouncermod.util.KnockbackEffect;
 
@@ -18,7 +17,7 @@ public class ItemRubberSword extends ItemSword {
 		super(ToolMaterials.RUBBER);
 		this.setUnlocalizedName(NAME);
 		this.setKnockback(1.0);
-		this.setCreativeTab(CreativeTabs.tabCombat);
+		this.setCreativeTab(CreativeTabs.COMBAT);
 	}
 
 	public Double knockback;

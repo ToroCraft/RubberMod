@@ -12,7 +12,7 @@ import net.torocraft.bouncermod.block.BounceModBlocks;
 public class WorldGenRubberTree  extends WorldGenAbstractTree {
 
     private static final IBlockState wood = BounceModBlocks.rubberWoodBlock.getDefaultState();
-    private static final IBlockState leaves = Blocks.leaves.getDefaultState();
+    private static final IBlockState leaves = Blocks.LEAVES.getDefaultState();
     private boolean useExtraRandomHeight;
 
     public WorldGenRubberTree(boolean notify, boolean useExtraRandomHeightIn)
@@ -56,7 +56,7 @@ public class WorldGenRubberTree  extends WorldGenAbstractTree {
                     {
                         if (j >= 0 && j < worldIn.getHeight())
                         {
-                            if (!this.isReplaceable(worldIn, blockpos$mutableblockpos.set(l, j, i1)))
+                            if (!this.isReplaceable(worldIn, blockpos$mutableblockpos.setPos(l, j, i1)))
                             {
                                 flag = false;
                             }
@@ -77,7 +77,7 @@ public class WorldGenRubberTree  extends WorldGenAbstractTree {
             {
                 BlockPos down = position.down();
                 IBlockState state = worldIn.getBlockState(down);
-                boolean isSoil = state.getBlock().canSustainPlant(state, worldIn, down, net.minecraft.util.EnumFacing.UP, (net.minecraft.block.BlockSapling)Blocks.sapling);
+                boolean isSoil = state.getBlock().canSustainPlant(state, worldIn, down, net.minecraft.util.EnumFacing.UP, (net.minecraft.block.BlockSapling)Blocks.SAPLING);
 
                 if (isSoil && position.getY() < worldIn.getHeight() - i - 1)
                 {

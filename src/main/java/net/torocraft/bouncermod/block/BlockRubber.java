@@ -25,13 +25,13 @@ public class BlockRubber extends Block {
 	private Double entityBounceSpeed;
 	
 	public BlockRubber() {
-		super(Material.ground);
+		super(Material.GROUND);
 		setUnlocalizedName(NAME);
 		setResistance(0.1f);
 		setHardness(5f);
 		setLightLevel(0);
-		setCreativeTab(CreativeTabs.tabBlock);
-		setStepSound(SoundType.SLIME);
+		setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
+		setSoundType(SoundType.SLIME);
 	}
 
 	@Override
@@ -72,13 +72,13 @@ public class BlockRubber extends Block {
 	}
 	
 	@Override
-    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, Entity entityIn)
+    public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
     {
 		if(entityIn.isSneaking()) {
-			super.onEntityCollidedWithBlock(worldIn, pos, entityIn);
+			super.onEntityCollidedWithBlock(worldIn, pos, state, entityIn);
 		} else {
 			bounce(entityIn);
-			super.onEntityCollidedWithBlock(worldIn, pos, entityIn);
+			super.onEntityCollidedWithBlock(worldIn, pos, state, entityIn);
 		}
     }
     

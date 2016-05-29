@@ -9,6 +9,6 @@ public class ItemRawRubber extends Item {
 	
 	public ItemRawRubber() {
 		this.setUnlocalizedName(NAME);
-		this.setCreativeTab(CreativeTabs.tabMisc);
+		this.setCreativeTab(CreativeTabs.MISC);
 	}
 }

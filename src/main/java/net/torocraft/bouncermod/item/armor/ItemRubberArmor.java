@@ -21,7 +21,7 @@ public class ItemRubberArmor extends ItemArmor {
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
 	    if (itemStack.getItem() == BounceModItems.rubberBootsItem) {
-	        effectPlayer(player, MobEffects.jump,4);
+	        effectPlayer(player, MobEffects.JUMP_BOOST, 4);
 	    }
 	} 
 

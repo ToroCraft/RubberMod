@@ -8,6 +8,6 @@ public class ArmorMaterials {
 	
 	private static final String MODID = BouncerMod.MODID;
 	
-	public static ArmorMaterial RUBBER = EnumHelper.addArmorMaterial("RUBBER", MODID + ":rubberArmor", 15, new int[]{2, 5, 4, 1}, 12, null);
+	public static ArmorMaterial RUBBER = EnumHelper.addArmorMaterial("RUBBER", MODID + ":rubberArmor", 15, new int[]{2, 5, 4, 1}, 12, null, 0.0f);
 
 }
